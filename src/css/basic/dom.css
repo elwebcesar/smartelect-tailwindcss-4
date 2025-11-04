@@ -1,0 +1,102 @@
+
+@layer base {
+body {
+    @apply bg-grey-50 text-black font-primary text-base overflow-x-hidden;
+}
+}
+
+h1{
+    @apply text-[48px] font-extrabold;
+}
+
+h2 {
+    @apply text-[34px] font-semibold;
+}
+
+h3{
+    @apply text-[28px] font-bold text-base/8;
+}
+
+h4{
+    @apply text-[22px] font-semibold;
+}
+
+h5 {
+    @apply text-[16px] font-semibold;
+}
+
+p {
+    @apply text-[24px];
+}
+
+p.regular{
+    @apply text-sm font-normal leading-none text-black;
+}
+
+hr {
+    @apply my-4 border-t-2 border-grey-100;
+}
+
+a, button {
+    &, & img, & .iconify {
+        transition: all .3s ease;
+    }
+}
+
+.base-bold{
+    @apply font-bold text-[14px];
+}
+
+.base-medium{
+    @apply font-medium text-[14px];
+}
+
+.base-semibold{
+    @apply font-semibold text-[14px];
+}
+
+label, .label {
+    @apply font-medium text-[14px];
+}
+:root {
+    --color-scrollbar-thumb: #CDCDCD;
+    --color-scrollbar-track: #EFEFEF;
+}
+
+.hide-mobile {
+    @apply hidden md:block
+}
+
+.hide-desktop {
+    @apply visible md:hidden
+}
+
+.hide-input {
+    @apply hidden;
+}
+
+.tag {
+    @apply py-1 px-4 w-auto text-sm text-sm/4 bg-gray-100 rounded-3xl;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--color-scrollbar-thumb) var(--color-scrollbar-track);
+}
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+*::-webkit-scrollbar-track {
+    background: var(--color-scrollbar-track);
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--color-scrollbar-thumb);
+    border-radius: 10px;
+    border: none;
+}
+ul.list-disc {
+    padding: 1rem;
+}

@@ -1,0 +1,29 @@
+@layer components {
+  .pagination {
+      @apply
+      flex
+      flex-wrap
+      items-stretch
+      justify-end
+      gap-2
+      mt-5
+      overflow-hidden
+      ;
+  }
+
+  /* .pagination button {
+    @apply py-2 bg-transparent border-gray-100 rounded-xl;
+  }
+
+  .pagination button:hover, .pagination button:focus {
+    @apply bg-white;
+  }
+
+  .pagination button.active {
+    @apply text-white bg-primary cursor-default;
+  }
+
+  .pagination button[disabled] {
+    @apply text-gray-600 !bg-gray-200;
+  } */
+}
