@@ -2,6 +2,7 @@
 
 @import './css/basic/dom.css';
 @import './css/basic/form.css';
+@import './css/basic/table.css';
 @import './css/template/template.css';
 @import './css/interface/interface.css';
 @import './css/interface/grid.css';
@@ -51,6 +52,9 @@
     --color-gray-400:#747474;
 
     --color-error:#e8070f;
+    
+    --color-valid:#0FA609;
+    --color-invalid:#FF0000;
 
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
@@ -59,8 +63,7 @@
     --breakpoint-xs: 480px;
 }
 
-@layer base {
-
+/* @layer base {
     *,
     ::after,
     ::before,
@@ -68,4 +71,4 @@
     ::file-selector-button {
         border-color: var(--color-gray-200, currentColor);
     }
-}
+} */

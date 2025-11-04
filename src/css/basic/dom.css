@@ -18,7 +18,7 @@ h3{
 }
 
 h4{
-    @apply text-[22px] font-semibold;
+    @apply text-[18px] font-semibold;
 }
 
 h5 {
@@ -26,7 +26,13 @@ h5 {
 }
 
 p {
-    @apply text-[24px];
+    @apply grid text-[24px];
+
+    & a {
+        &:hover, &:focus {
+            @apply text-black;
+        }        
+    }
 }
 
 p.regular{
@@ -76,7 +82,7 @@ label, .label {
 }
 
 .tag {
-    @apply py-1 px-4 w-auto text-sm text-sm/4 bg-gray-100 rounded-3xl;
+    @apply flex items-center py-1 px-4 w-auto text-sm text-sm/4 bg-gray-100 rounded-3xl;
 }
 
 /* ===== Scrollbar CSS ===== */

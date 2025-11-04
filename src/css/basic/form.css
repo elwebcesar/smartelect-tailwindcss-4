@@ -74,7 +74,7 @@ select:not(.clear) {
 }
 
 .group-form-h label {
-    @apply min-w-[80px] sm:text-right;
+    @apply sm:text-right;
 }
 
 .group-form-h :last-child {
@@ -139,10 +139,23 @@ a.button:not(.btn-icon):not(.pagination *),
     border-primary
     ;
 
-     &:hover, &:focus {
+    &:hover, &:focus {
         @apply text-primary bg-gray-100;
-     }
+    }
 }
+
+/* secondary*/
+[type=button].btn-secondary, [type=reset].btn-secondary, [type=submit].btn-secondary, a.button.btn-secondary, .sequence-links a.btn-secondary {
+    @apply font-extrabold
+    text-primary
+    bg-light
+    border-primary;
+
+    &:hover, &:focus {
+        @apply text-gray-500 bg-gray-100;
+    }
+}
+
 
 /* tertiary*/
 [type=button].btn-tertiary, [type=reset].btn-tertiary, [type=submit].btn-tertiary, a.button.btn-tertiary, .sequence-links a.btn-tertiary {

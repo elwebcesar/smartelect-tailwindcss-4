@@ -1,5 +1,9 @@
 .container-h {
     @apply flex flex-wrap flex-col md:flex-row items-stretch justify-start gap-3;
+
+    &.children-full > * {
+        @apply flex-1;
+    }
 }
 
 .container-h.all-w {

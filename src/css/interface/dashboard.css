@@ -109,11 +109,25 @@
     rounded-3xl
     ;
 
+    &.item__secondary {
+        @apply border-gray-100;
+
+        &:hover, &:focus {
+            .iconify {
+                @apply text-primary;
+            }
+        }        
+    }
+
     & .iconify {
         @apply w-[18px] h-[18px] text-gray-300;
     }
 
-    &.item__accent, &:hover, &:focus {
+    /* &.item__accent, &:hover, &:focus { */
+    &:is(a):hover,
+    &:is(button):hover,
+    &:is(a):focus,
+    &:is(button):focus {
         @apply border-primary;
     }
 
@@ -128,6 +142,28 @@
 
         &:hover, &:focus {
             @apply bg-gray-50;
+        }
+    }
+}
+
+div, span {
+    &.item {
+        @apply border-gray-100;
+
+        &.valid {
+            @apply border-valid;
+
+            .iconify {
+                @apply text-valid;
+            }
+        }
+        
+        &.invalid {
+            @apply border-invalid;
+
+            .iconify {
+                @apply text-invalid;
+            }
         }
     }
 }

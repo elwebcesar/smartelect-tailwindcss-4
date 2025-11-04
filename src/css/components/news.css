@@ -3,23 +3,25 @@
         @apply grid gap-10;
 
         & li {
-            @apply grid lg:flex gap-5;
+            & a {
+                @apply grid grid-cols-1 md:grid-cols-[260px_1fr] gap-5;
 
-            & figure {
-                width: 260px;
-                height: 150px;
-                @apply bg-primary overflow-hidden rounded-3xl;
+                & figure {
+                    width: 260px;
+                    height: 150px;
+                    @apply bg-primary overflow-hidden rounded-3xl;
 
-                & img {
-                    @apply object-cover;
+                    & img {
+                        @apply object-cover;
+                    }
                 }
-            }
 
-            & a:hover, & a:focus {
-                @apply text-primary;
+                &:hover, &:focus {
+                    @apply text-primary;
 
-                & img {
-                    @apply opacity-80;
+                    & img {
+                        @apply opacity-80;
+                    }
                 }
             }
         }

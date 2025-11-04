@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind + Vite</title>
+
+  <link rel="preconnect" href="https://fonts.bunny.net">
+  <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600|montserrat:400,500,600,700" rel="stylesheet" />
+
+  <link href="/src/input.css" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="dashboard__container">
+      <header class="dashboard__header">
+        <div class="dashboard__header--logo">
+          <h1>Smart<span class="text-primary">E</span>lect</h1>
+        </div>
+        <div class="dashboard__header--profile">
+          <h4 class="dashboard__header--profile--name">Hola! Juan</h4>
+          <div class="relative w-8 h-8">
+            <!-- notifications -->
+            <div class="container-notifications">
+              <div class="notifications">
+                <input type="checkbox" name="one" id="view-notifications" class="hide-input">
+                <label for="view-notifications">
+                    <span class="iconify notification_icon" data-icon="mingcute:bell-ringing-fill"></span>
+                    <span class="bubble">
+                      <span>99</span>
+                    </span>
+                </label>
+                <div class="notifications-display">
+                  <div class="relative bg-gray-200 overflow-hidden rounded-xl shadow-lg">
+                    <div class="flex items-center justify-between w-full px-4 py-2">
+                      <span class="label flex pt-1.5 pb-1 px-2 gap-1 bg-white rounded">
+                        Notificaciones
+                        <span class="inline-flex items-center justify-center w-5 h-5 font-semibold text-white bg-primary rounded-full">
+                          0
+                        </span>
+                      </span>
+                      <form action="https://app.miclientela.com/notificaciones/change_status_all" method="POST" class="inline-flex">
+                        <input type="hidden" name="_token" value="MqFaDCAQYD3AtpkiRVsHsTd9v8kHfZnq2JzWvfOQ">
+                        <input type="hidden" name="_method" value="put">
+                        <button type="submit" class="small" aria-label="Close">
+                          Marcar como leídos
+                        </button>
+                      </form>
+                    </div>
+                    <div class="w-full bg-white">
+                      <div class="w-full max-w-md p-4">
+                        <p><strong>Sin notificaciones</strong><br>
+                          No hay notificaciones en este momento
+                        </p>
+                      </div>      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notifications -->
+          </div>
+          <div class="relative w-8 h-8">
+            <div class="container-profile">
+              <div class="profile-data">
+                <input type="checkbox" name="profile" id="view-profile" class="hide-input">
+                <label for="view-profile">
+                  <h5 class="profile-data__avatar">
+                    JG
+                  </h5>
+                </label>
+                <div class="profile-data__display">
+                  <ul>
+                    <li>
+                      <a href="">
+                        <span class="iconify" data-icon="mingcute:user-3-fill"></span> Mi Perfíl
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="iconify" data-icon="mingcute:right-fill"></span> Salir
+                      </a>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hide-mobile">
+            <select class="min-w-3xs">
+              <option value="">Option 1</option>
+              <option value="">Option 2</option>
+              <option value="">Option 3</option>
+              <option value="">Option 4</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      <main class="dashboard__main">
+        <aside class="dashboard__main__aside">
+          <div class="container-lateral-menu">
+              <input type="checkbox" name="one" id="lateral-menu" class="hide-input">
+              <label for="lateral-menu">
+                  <span class="iconify icon-open" data-icon="mingcute:menu-fill" data-width="24" data-height="24"></span>
+                  <span class="iconify icon-close" data-icon="mingcute:close-fill" data-width="24" data-height="24"></span>
+              </label>
+              <div>
+                  <div class="dashboard__main__aside--data__info">
+                    Campaña
+                    <h4>Jorge Rodriguez</h4>
+                    <h5 class="text-gray-300">Alcalde de Palermo 2026 - 2030</h5>
+                  </div>
+                  <nav>
+                    <ul class="lateral-menu">
+                      <li><a href="" class="item__active">Noticias</a></li>
+                      <li><a href="">Comités</a></li>
+                      <li><a href="">Actividades</a></li>
+                      <!-- <li class="sub">
+                        <input type="checkbox" />
+                        <a href="#" class="sub-item"><i class="fas fa-stethoscope"></i>Diagnóstico</a>
+                        <ul class="submenu">
+                          <li><a href="#">Iniciar Diagnóstico</a></li>
+                          <li><a href="#">Diagnósticos Generados</a></li>
+                        </ul>
+                      </li> -->
+                      <li><a href="" class="item__accent">Referir Simpatizante <span class="iconify" data-icon="mingcute:right-fill"></span></a></li>
+                    </ul>
+                  </nav>
+                  <div class="dashboard__main__aside--vote">
+                    <a href="#" class="item__accent"><span class="iconify" data-icon="mdi:vote"></span> Punto de Votación</a>
+                  </div>
+                  <select class="hide-desktop">
+                    <option value="">Option 1</option>
+                    <option value="">Option 2</option>
+                    <option value="">Option 3</option>
+                    <option value="">Option 4</option>
+                  </select>
+                </div>
+          </div>
+        </aside>
+        <section class="dashboard__main__section">         
+          <div class="breadcrumbs">
+            Listados
+          </div>
+
+          <!-- Listados -->
+          <article class="dashboard__main__section__article">
+            <div class="flex justify-end">
+              <button type="button" class="btn-primary"><span class="iconify" data-icon="mingcute:add-fill"></span>Crear Nuevo Listado</button>
+            </div>
+            <div class="container-v area-2">
+              <h5>Buscar</h5>
+              <div class="container-h children-full">
+                <div class="group-form-v">
+                    <label for="">Por Nombre</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Digite el Nombre a Buscar">
+                </div>
+                <div class="group-form-v">
+                    <label for="">Por Nombre</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Digite el Nombre a Buscar">
+                </div>
+                <div class="group-form-v">
+                    <label for="">Por Nombre</label>
+                    <input type="text" name="full-name" id="full-name" placeholder="Digite el Nombre a Buscar">
+                </div>
+              </div>
+              <div class="flex justify-end">
+                <button type="button" class="btn-secondary"><span class="iconify" data-icon="mingcute:search-line"></span>Buscar</button>
+              </div>
+            </div>
+            <ul class="list-vertical wrap-primary">
+              <li>
+                <div class="container-h !justify-between">
+                  <h4 class="flex items-center"><a href="#">2025-10-03_14:21:00 - Barrio Candido</a></h4>
+                  <div class="container-h">
+                    <div class="tag">321 Integrantes</div>
+                    <button type="button" class="btn-secondary"><span class="iconify" data-icon="mingcute:file-download-line"></span></button>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container-h !justify-between">
+                  <h4 class="flex items-center"><a href="#">2025-10-03_14:21:00 - Barrio Candido</a></h4>
+                  <div class="container-h">
+                    <div class="tag">321 Integrantes</div>
+                    <button type="button" class="btn-secondary"><span class="iconify" data-icon="mingcute:file-download-line"></span></button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <nav class="pagination" aria-label="Pagination">
+              <button type="button" disabled aria-label="página anterior"><span class="iconify" data-icon="mingcute:left-fill"></span></button>
+              <button type="button" class="active" aria-current="Página">1</button>
+              <button type="button">2</button>
+              <button type="button">3</button>
+              <button type="button" aria-label="página siguiente"><span class="iconify" data-icon="mingcute:right-fill"></span></button>
+            </nav>
+          </article>
+          <!-- end Listados -->
+
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
