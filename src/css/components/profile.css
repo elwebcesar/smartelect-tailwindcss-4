@@ -33,13 +33,18 @@
         @apply text-gray-300;
     }
    }
-   & a, button {
-    &:hover, &:focus {
-        &, & .iconify {
-            @apply text-primary;
+
+    & button {
+      @apply !p-0;
+    }
+
+      & a, button {
+        &:hover, &:focus {
+            &, & .iconify {
+                @apply text-primary;
+            }
         }
     }
-   }
   }
 
   .profile-data input[type="checkbox"].hide-input:checked ~ div {

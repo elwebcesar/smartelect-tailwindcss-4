@@ -182,5 +182,6 @@ button[disabled], input[type="button"][disabled], input[type="reset"][disabled],
 }
 
 button.clear {
-    @apply p-0 font-primary text-base border-none;
+    @apply font-primary text-base border-none;
+    padding: 0;
 }
