@@ -32,7 +32,8 @@
     & .iconify {
         @apply text-gray-300;
     }
-
+   }
+   & a, button {
     &:hover, &:focus {
         &, & .iconify {
             @apply text-primary;

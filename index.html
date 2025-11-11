@@ -78,9 +78,14 @@
                       </a>
                     </li>
                     <li>
-                      <a href="">
+                      <form method="POST" action="{{ route('logout') }}" class="w-full">
+                          <button type="submit" class="clear">
+                              <span class="iconify" data-icon="mingcute:right-fill"></span> Salir
+                          </button>
+                      </form>
+                      <!-- <a href="">
                         <span class="iconify" data-icon="mingcute:right-fill"></span> Salir
-                      </a>
+                      </a> -->
                     </li>
                 </div>
               </div>
